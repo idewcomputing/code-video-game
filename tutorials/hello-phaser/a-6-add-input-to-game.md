@@ -1,20 +1,20 @@
-# A-6 Add Input to Game
+# 6 Add Input to Game
 
 Finally, let's add a way for a player to interact with the game by pressing a key.
 
-Phaser CE supports the ability to detect input through a keyboard, mouse, touchscreen, or gamepad. If necessary, you can have multiple inputs \(e.g., several keys plus mouse, etc.\).
+Phaser CE supports the ability to detect input through a keyboard, mouse, touchscreen, or gamepad. If necessary, you can have multiple inputs (e.g., several keys plus mouse, etc.).
 
 ## Declare Variable for Input Key
 
 You'll have the player use the spacebar key as an input to interact with the game. To do this, you'll first need to declare a global variable to represent this input key.
 
-Copy this JS code, and paste it on a new line after line 5 \(which created the global variable named `logo`\):
+Copy this JS code, and paste it on a new line after line 5 (which created the global variable named `logo`):
 
 ```javascript
 var spacebar;
 ```
 
-This JS code statement declares \(creates\) a new global variable named `spacebar`, which will be used to represent the spacebar key on the keyboard.
+This JS code statement declares (creates) a new global variable named `spacebar`, which will be used to represent the spacebar key on the keyboard.
 
 ## Add Input Key to Game
 
@@ -45,16 +45,16 @@ The `game.input.keyboard.addKey()` method requires one parameter inside its pare
 
 ## Check Input Key During Gameplay
 
-Each input key that is added to your game has several properties that be checked to determine if and when the key is pressed \(or released\):
+Each input key that is added to your game has several properties that be checked to determine if and when the key is pressed (or released):
 
 * `isDown` — value is true if key is currently pressed down
-* `isUp` — value is true if key is currently released up \(i.e., **not** being pressed\)
+* `isUp` — value is true if key is currently released up (i.e., **not** being pressed)
 * `justDown` — value is true only when key has just been pressed down
 * `justUp` — value is true only when key has just been released up
 
-For this game, you'll change the background color of the game canvas if the spacebar key has just been pressed down \(meaning the player will have to release the spacebar key and press it again, in order to change the background color again\).
+For this game, you'll change the background color of the game canvas if the spacebar key has just been pressed down (meaning the player will have to release the spacebar key and press it again, in order to change the background color again).
 
-You can use an `if` [conditional statement](https://www.w3schools.com/js/js_if_else.asp) to check if a specific condition is true or false:
+You can use an `if` [conditional statement](https://www.w3schools.com/js/js\_if\_else.asp) to check if a specific condition is true or false:
 
 * If the condition is true, whatever code statements you've listed within the `if` statement will be performed.
 * If the condition is false, those code statements will **not** be performed.
@@ -69,7 +69,7 @@ Copy this code, and paste it on the blank line within the `update()` function:
 
 The `if` statement checks whether the `spacebar.justDown` property is currently true or false. If this condition is true, the code listed within the curly braces will be performed.
 
-The code statement within the curly braces is a Phaser CE code statement that will set the background color of the game canvas \(`game.stage`\) to a random color.
+The code statement within the curly braces is a Phaser CE code statement that will set the background color of the game canvas (`game.stage`) to a random color.
 
 Because the `update()` function runs repeatedly in a loop, the game will keep checking the spacebar key to see if it has just been pressed down.
 
@@ -77,11 +77,10 @@ Because the `update()` function runs repeatedly in a loop, the game will keep ch
 
 Preview the game in your code editor. Depending on your code editor, you might need to refresh its preview pane. If necessary, open the preview in a new tab or window to view it in fullscreen.
 
-Your game's background should change to a random color each time you've just pressed the spacebar key \(you'll have to release the key and press it again to change the color again\).
+Your game's background should change to a random color each time you've just pressed the spacebar key (you'll have to release the key and press it again to change the color again).
 
 If so, congratulations — you've successfully completed the Hello Phaser tutorial!
 
-\(Otherwise, if not, double-check your code to see where you might have a mistake.\)
+(Otherwise, if not, double-check your code to see where you might have a mistake.)
 
-![](../../.gitbook/assets/hello-phaser-final-preview.jpg)
-
+![](<../../.gitbook/assets/hello-phaser-final-preview (1).jpg>)
